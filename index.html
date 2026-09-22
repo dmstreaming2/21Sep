@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌻 21 de Septiembre - Tus Flores Amarillas 💛</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Cinzel:wght@400;600&family=Italiana&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', serif;
+    background: linear-gradient(180deg, 
+      #fff8e7 0%, 
+      #ffefc4 20%, 
+      #ffe4a3 45%, 
+      #ffd88a 70%, 
+      #fff5dc 100%);
+    color: #3e2723;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* Luz celestial desde arriba */
+  .luz-celestial {
+    position: fixed;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120vw;
+    height: 80vh;
+    background: radial-gradient(ellipse at top, 
+      rgba(255, 248, 220, 0.9) 0%, 
+      rgba(255, 235, 180, 0.5) 30%, 
+      transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+    animation: pulsoLuz 8s ease-in-out infinite;
+  }
+
+  @keyframes pulsoLuz {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+
+  /* Rayos sutiles */
+  .rayos {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 200vw;
+    height: 100vh;
+    transform: translateX(-50%);
+    background: 
+      linear-gradient(115deg, transparent 45%, rgba(255, 215, 100, 0.15) 48%, transparent 52%),
+      linear-gradient(75deg, transparent 45%, rgba(255, 215, 100, 0.1) 48%, transparent 52%),
+      linear-gradient(95deg, transparent 45%, rgba(255, 215, 100, 0.12) 48%, transparent 52%);
+    pointer-events: none;
+    z-index: 2;
+    animation: moverRayos 20s ease-in-out infinite;
+  }
+
+  @keyframes moverRayos {
+    0%, 100% { transform: translateX(-50%) rotate(-2deg); }
+    50% { transform: translateX(-50%) rotate(2deg); }
+  }
+
+  /* Pétalos cayendo suaves */
+  .petalo {
+    position: fixed;
+    top: -50px;
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle at 30% 30%, #fff9c4, #ffd54f, #f9a825);
+    border-radius: 50% 10% 50% 50%;
+    opacity: 0.7;
+    animation: caer linear infinite;
+    z-index: 3;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+  }
+
+  @keyframes caer {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.8; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+
+  /* Contenedor principal */
+  .contenedor {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 25px;
+  }
+
+  /* HERO - Encabezado elegante */
+  .hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative;
+  }
+
+  .ornamento {
+    font-family: 'Italiana', serif;
+    font-size: 2rem;
+    color: #d4af37;
+    letter-spacing: 15px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    animation: aparecer 2s ease-out;
+  }
+
+  .fecha-elegante {
+    font-family: 'Italiana', serif;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #8d6e63;
+    margin-bottom: 15px;
+    animation: aparecer 2s ease-out;
+  }
+
+  .fecha-elegante::before,
+  .fecha-elegante::after {
+    content: '❦';
+    margin: 0 20px;
+    color: #d4af37;
+    font-size: 1.2rem;
+  }
+
+  .titulo-principal {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    background: linear-gradient(
+      90deg,
+      #b8860b 0%,
+      #d4af37 25%,
+      #ffd700 50%,
+      #d4af37 75%,
+      #b8860b 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite, aparecerTitulo 2.5s ease-out;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 20px rgba(212, 175, 55, 0.2);
+  }
+
+  @keyframes shimmer {
+    to { background-position: 200% center; }
+  }
+
+  @keyframes aparecerTitulo {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .subtitulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    color: #5d4037;
+    letter-spacing: 2px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    animation: aparecer 2.5s ease-out;
+  }
+
+  /* Separador elegante */
+  .separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    max-width: 400px;
+    gap: 15px;
+    animation: aparecer 3s ease-out;
+  }
+
+  .linea-dorada {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  }
+
+  .cruz-dorada {
+    color: #d4af37;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    animation: brillarSuave 3s ease-in-out infinite;
+  }
+
+  @keyframes brillarSuave {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  /* SECCIÓN FLOR CENTRAL */
+  .seccion-flor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .flor-container {
+    width: clamp(240px, 40vw, 350px);
+    height: clamp(240px, 40vw, 350px);
+    position: relative;
+    margin: 20px 0 40px;
+    animation: flotar 6s ease-in-out infinite, aparecer 3s ease-out;
+  }
+
+  @keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .halo-divino {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140%;
+    height: 140%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, 
+      rgba(255, 248, 220, 0.8) 0%, 
+      rgba(255, 215, 100, 0.4) 30%, 
+      transparent 70%);
+    border-radius: 50%;
+    animation: pulsarHalo 4s ease-in-out infinite;
+    z-index: -1;
+  }
+
+  @keyframes pulsarHalo {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+  }
+
+  .flor-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 15px 30px rgba(212, 175, 55, 0.4));
+  }
+
+  /* Versículo destacado */
+  .versiculo-destacado {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 
+      0 20px 50px rgba(212, 175, 55, 0.15),
+      inset 0 0 30px rgba(255, 255, 255, 0.3);
+    position: relative;
+    animation: aparecer 3.5s ease-out;
+  }
+
+  .versiculo-destacado::before,
+  .versiculo-destacado::after {
+    content: '❝';
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #d4af37;
+    opacity: 0.4;
+  }
+
+  .versiculo-destacado::before {
+    top: 10px;
+    left: 20px;
+  }
+
+  .versiculo-destacado::after {
+    content: '❞';
+    bottom: 10px;
+    right: 20px;
+  }
+
+  .versiculo-texto {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.3vw, 1.6rem);
+    color: #4e342e;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .versiculo-referencia {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: #b8860b;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* CARRUSEL DE VERSÍCULOS */
+  .carrusel-versiculos {
+    margin: 60px auto;
+    max-width: 800px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .titulo-seccion {
+    font-family: 'Italiana', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #8d6e63;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .titulo-seccion::before,
+  .titulo-seccion::after {
+    content: '✦';
+    color: #d4af37;
+    margin: 0 20px;
+    font-size: 0.8em;
+  }
+
+  .tarjeta-versiculo {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px 35px;
+    border-radius: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+    position: relative;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.6s ease;
+  }
+
+  .versiculo-slide {
+    display: none;
+    animation: fadeInSlide 1s ease;
+  }
+
+  .versiculo-slide.activo {
+    display: block;
+  }
+
+  @keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .versiculo-slide p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: #4e342e;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .versiculo-slide .referencia {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: #b8860b;
+    text-transform: uppercase;
+  }
+
+  .controles-carrusel {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .punto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+
+  .punto.activo {
+    background: #d4af37;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  }
+
+  /* MENSAJE PERSONAL */
+  .mensaje-personal {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 60px 45px;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.6) 0%, 
+      rgba(255, 248, 220, 0.5) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 
+      0 25px 60px rgba(212, 175, 55, 0.2),
+      inset 0 0 40px rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .mensaje-personal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+      transparent, 
+      #d4af37, 
+      #ffd700, 
+      #d4af37, 
+      transparent);
+  }
+
+  .mensaje-personal::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+      transparent, 
+      #d4af37, 
+      #ffd700, 
+      #d4af37, 
+      transparent);
+  }
+
+  .mensaje-personal h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    background: linear-gradient(90deg, #b8860b, #d4af37, #ffd700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+  }
+
+  .mensaje-personal p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    color: #4e342e;
+    line-height: 2;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .mensaje-personal .firma-final {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    color: #b8860b;
+    margin-top: 30px;
+    font-style: normal;
+  }
+
+  /* ORACIÓN FINAL */
+  .oracion-final {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 50px 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    position: relative;
+  }
+
+  .oracion-final .icono-paloma {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: volarPaloma 4s ease-in-out infinite;
+    display: inline-block;
+  }
+
+  @keyframes volarPaloma {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+  }
+
+  .oracion-final h4 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #8d6e63;
+    margin-bottom: 25px;
+  }
+
+  .oracion-final p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #5d4037;
+    line-height: 1.9;
+    margin-bottom: 15px;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #8d6e63;
+    letter-spacing: 2px;
+  }
+
+  .footer .corazones {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+  }
+
+  /* Animación aparecer */
+  @keyframes aparecer {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .contenedor { padding: 30px 15px; }
+    .mensaje-personal { padding: 40px 25px; }
+    .versiculo-destacado { padding: 30px 20px; }
+    .fecha-elegante::before,
+    .fecha-elegante::after { margin: 0 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Efectos de fondo -->
+<div class="luz-celestial"></div>
+<div class="rayos"></div>
+
+<div class="contenedor">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="ornamento">✦ ✦ ✦</div>
+    <p class="fecha-elegante">21 de Septiembre</p>
+    <h1 class="titulo-principal">Tus Flores Amarillas</h1>
+    <p class="subtitulo">Para ti mi amor, Debora Rousse Marcas Leon</p>
+  </section>
+
+  <!-- SEPARADOR -->
+  <div class="separador">
+    <div class="linea-dorada"></div>
+    <span class="cruz-dorada">✝</span>
+    <div class="linea-dorada"></div>
+  </div>
+
+  <!-- FLOR CENTRAL Y VERSÍCULO -->
+  <section class="seccion-flor">
+    <div class="flor-container">
+      <div class="halo-divino"></div>
+      <svg class="flor-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="petaloGrad" cx="50%" cy="30%">
+            <stop offset="0%" stop-color="#fffde7"/>
+            <stop offset="40%" stop-color="#fff59d"/>
+            <stop offset="80%" stop-color="#ffd54f"/>
+            <stop offset="100%" stop-color="#f9a825"/>
+          </radialGradient>
+          <radialGradient id="centroGrad" cx="50%" cy="50%">
+            <stop offset="0%" stop-color="#fff59d"/>
+            <stop offset="40%" stop-color="#ffb300"/>
+            <stop offset="100%" stop-color="#e65100"/>
+          </radialGradient>
+          <filter id="brilloSuave">
+            <feGaussianBlur stdDeviation="1.5" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <g filter="url(#brilloSuave)">
+          <ellipse cx="100" cy="45" rx="20" ry="42" fill="url(#petaloGrad)" opacity="0.95"/>
+          <ellipse cx="100" cy="45" rx="20" ry="42" fill="url(#petaloGrad)" opacity="0.95" transform="rotate(45 100 100)"/>
+          <ellipse cx="100" cy="45" rx="20" ry="42" fill="url(#petaloGrad)" opacity="0.95" transform="rotate(90 100 100)"/>
+          <ellipse cx="100" cy="45" rx="20" ry="42" fill="url(#petaloGrad)" opacity="0.95" transform="rotate(135 100 100)"/>
+          <ellipse cx="100" cy="45" rx="20" ry="42" fill="url(#petaloGrad)" opacity="0.95" transform="rotate(180 100 100)"/>
+          <ellipse cx="100" cy="45" rx="20" ry="42" fill="url(#petaloGrad)" opacity="0.95" transform="rotate(225 100 100)"/>
+          <ellipse cx="100" cy="45" rx="20" ry="42" fill="url(#petaloGrad)" opacity="0.95" transform="rotate(270 100 100)"/>
+          <ellipse cx="100" cy="45" rx="20" ry="42" fill="url(#petaloGrad)" opacity="0.95" transform="rotate(315 100 100)"/>
+        </g>
+
+        <circle cx="100" cy="100" r="26" fill="url(#centroGrad)" filter="url(#brilloSuave)"/>
+        <circle cx="93" cy="93" r="4" fill="#fff9c4" opacity="0.8"/>
+      </svg>
+    </div>
+
+    <!-- Versículo destacado -->
+    <div class="versiculo-destacado">
+      <p class="versiculo-texto">
+        "Yo soy la rosa de Sarón, el lirio de los valles. Como el lirio entre los espinos, así es mi amada entre las mujeres."
+      </p>
+      <p class="versiculo-referencia">— Cantares 2:1-2</p>
+    </div>
+  </section>
+
+  <!-- SEPARADOR -->
+  <div class="separador">
+    <div class="linea-dorada"></div>
+    <span class="cruz-dorada">❦</span>
+    <div class="linea-dorada"></div>
+  </div>
+
+  <!-- CARRUSEL DE VERSÍCULOS -->
+  <section class="carrusel-versiculos">
+    <h2 class="titulo-seccion">Palabras de Amor</h2>
+    
+    <div class="tarjeta-versiculo">
+      <div class="versiculo-slide activo">
+        <p>"El amor es paciente, es bondadoso; el amor no tiene envidia. El amor no es orgulloso ni presumido, no es grosero ni egoísta."</p>
+        <p class="referencia">— 1 Corintios 13:4-5</p>
+      </div>
+      <div class="versiculo-slide">
+        <p>"Toda tú eres hermosa, amiga mía; en ti no hay defecto."</p>
+        <p class="referencia">— Cantares 4:7</p>
+      </div>
+      <div class="versiculo-slide">
+        <p>"Nosotros amamos, porque Él nos amó primero."</p>
+        <p class="referencia">— 1 Juan 4:19</p>
+      </div>
+      <div class="versiculo-slide">
+        <p>"Este es el día que hizo Jehová; nos gozaremos y alegraremos en él."</p>
+        <p class="referencia">— Salmos 118:24</p>
+      </div>
+      <div class="versiculo-slide">
+        <p>"Mejores son dos que uno; porque tienen mejor paga de su trabajo. Porque si cayeren, el uno levantará a su compañero."</p>
+        <p class="referencia">— Eclesiastés 4:9-10</p>
+      </div>
+      <div class="versiculo-slide">
+        <p>"Y ahora permanecen la fe, la esperanza y el amor, estos tres; pero el mayor de ellos es el amor."</p>
+        <p class="referencia">— 1 Corintios 13:13</p>
+      </div>
+      <div class="versiculo-slide">
+        <p>"Mujer virtuosa, ¿quién la hallará? Porque su valor sobrepasa largamente al de las piedras preciosas."</p>
+        <p class="referencia">— Proverbios 31:10</p>
+      </div>
+    </div>
+
+    <div class="controles-carrusel" id="controles"></div>
+  </section>
+
+  <!-- SEPARADOR -->
+  <div class="separador">
+    <div class="linea-dorada"></div>
+    <span class="cruz-dorada">✝</span>
+    <div class="linea-dorada"></div>
+  </div>
+
+  <!-- MENSAJE PERSONAL -->
+  <section class="mensaje-personal">
+    <h3>Para ti, mi amor</h3>
+    <p>Hoy, 21 de septiembre, no seras espectadora jasjas. Se que quizas no pude darte unas flores amarillas presencial pero si estaba en mi intencion dartelas amor, disculpame por quizas no haberlo hecho pero te envío estas flores amarillas virutal</p>
+    <p>Solo decirte que eres la mujer que Dios preparó para mí, mi compañera, mi amiga, mi futura esposa jsjsj, la razón de mis oraciones y la bendición más grande que he recibido de parte de el.</p>
+    <p>Se que no necesito de un dia especial para decirte todo lo que siento y demostrarte lo que eres para mi, aun asi este dia quiero que vuelvas a tener en cuenta que quiero estar contigo el resto de mis dias y que seas solo tu en mi vida, te quiero y amo demasiado, siempre lo voy hacerr </p>
+    <p class="firma-final">Con todo mi amor 💛</p>
+  </section>
+
+  <!-- GRACIAS AMOR -->
+  <section class="oracion-final">
+    <div class="icono-paloma"></div>
+    <h4>Una Oración por Nosotros</h4>
+    <p>Hoy me hiciste muy feliz con el detalle que me diste, gracias por ser parte de mi vida y amarme con esa sinceridad con la que haces, sabes que ese amor es reciproco te amo demasiado a pesar de todas las situaciones que pasamos y podamos pasar, gracias por llegar a mi vida amor. p</p>
+    <p>Que nuestro amor sea para siempre y que Dios sea el centro de nuestra relacion en todo momento, se que aun en los momentos dificiles que puedas estar pasando o podamos estar pasando es Dios que nos dara su fortaleza y ayuda, que sea el quien nos dirija con bien amor. Te quiero mucho"</p>
+    <p style="margin-top: 20px; color: #b8860b; font-style: normal; letter-spacing: 3px;"></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>"Lo que Dios unió, no lo separe el hombre"</p>
+    <div class="corazones">💛 🌼 💛 🌼 💛</div>
+  </footer>
+
+</div>
+
+<script>
+  // Pétalos cayendo suaves
+  function crearPetalo() {
+    const petalo = document.createElement('div');
+    petalo.classList.add('petalo');
+    petalo.style.left = Math.random() * 100 + 'vw';
+    petalo.style.animationDuration = (Math.random() * 8 + 8) + 's';
+    const size = Math.random() * 10 + 10;
+    petalo.style.width = size + 'px';
+    petalo.style.height = size + 'px';
+    document.body.appendChild(petalo);
+    setTimeout(() => petalo.remove(), 16000);
+  }
+
+  setInterval(crearPetalo, 800);
+  for (let i = 0; i < 8; i++) {
+    setTimeout(crearPetalo, i * 300);
+  }
+
+  // Carrusel de versículos
+  const slides = document.querySelectorAll('.versiculo-slide');
+  const controles = document.getElementById('controles');
+  let indiceActual = 0;
+
+  // Crear puntos de control
+  slides.forEach((_, i) => {
+    const punto = document.createElement('button');
+    punto.classList.add('punto');
+    if (i === 0) punto.classList.add('activo');
+    punto.addEventListener('click', () => cambiarSlide(i));
+    controles.appendChild(punto);
+  });
+
+  function cambiarSlide(indice) {
+    slides[indiceActual].classList.remove('activo');
+    document.querySelectorAll('.punto')[indiceActual].classList.remove('activo');
+    indiceActual = indice;
+    slides[indiceActual].classList.add('activo');
+    document.querySelectorAll('.punto')[indiceActual].classList.add('activo');
+  }
+
+  // Auto-avance cada 5 segundos
+  setInterval(() => {
+    const siguiente = (indiceActual + 1) % slides.length;
+    cambiarSlide(siguiente);
+  }, 5000);
+</script>
+
+</body>
+</html>
